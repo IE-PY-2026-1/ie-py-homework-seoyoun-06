@@ -1,3 +1,4 @@
+[AI 협업캡쳐&실행결과.pdf](https://github.com/user-attachments/files/27132009/AI.pdf)
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/qR-atX5d)
 # 🐍 [2026-01] 나만의 파이썬 소프트웨어 개발 프로젝트
 
@@ -75,6 +76,7 @@
 ### **📁 증빙 자료:**
   * [2차_AI협업캡처.pdf 첨부 완료] (첨부 후 링크)
   * [2차과제_실행결과.jpg]
+[AI 협업캡쳐&실행결과.pdf](https://github.com/user-attachments/files/27132015/AI.pdf)
 <br>
 
 ## 🟨 [3차 과제: V3.0] 무한 루프와 메뉴 시스템 (반복문) - 향후 작성 예정
