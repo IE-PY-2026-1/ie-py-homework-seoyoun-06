@@ -1,4 +1,4 @@
-[AI 협업캡쳐&실행결과.pdf](https://github.com/user-attachments/files/27132009/AI.pdf)
+[AI 협업캡쳐 60252455 장서윤.pdf](https://github.com/user-attachments/files/28227342/AI.60252455.pdf)[AI 협업캡쳐&실행결과.pdf](https://github.com/user-attachments/files/27132009/AI.pdf)
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/qR-atX5d)
 # 🐍 [2026-01] 나만의 파이썬 소프트웨어 개발 프로젝트
 
@@ -106,8 +106,10 @@
    * **해결:** 필수 요구사항인 메인 메뉴 종료 탈출 기능에서만 break 가 작동되도록 하고, 분석 함수 내의 불필요한 조기 종료 break를 제거한 후에 안내문구로 대신하여 입력되어진 모든 데이터가 전부 누락없이 전수분석이 되도록 한 후에 통계적으로 산출되도록 설계를 수정
      
 ### **📁 증빙 자료:**
-  * [3차_AI협업캡처.pdf 첨부 완료] (첨부 후 링크)
-  * [3차과제_실행결과.jpg]
+  * [3차_AI협업캡처.pdf 첨부 완료]
+  * [AI 협업캡쳐 60252455 장서윤.pdf](https://github.com/user-attachments/files/28227346/AI.60252455.pdf)
+  * [3차과제_실행결과.jpg][실행결과 60252455 장서윤.pdf](https://github.com/user-attachments/files/28226979/60252455.pdf)
+
 <br>
 
 ### 🟥 [4차 과제: V4.0] 모듈화 및 데이터 확장 (배열과 함수) - 🌟최종 완성 -- 향후 작성 예정
