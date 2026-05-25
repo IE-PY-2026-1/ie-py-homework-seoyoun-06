@@ -1,42 +1,42 @@
 Python 3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)] on win32
 Enter "help" below or click "Help" above for more information.
->>> # 파일이름 : 2차과제
-... # 작 성 자 : 장서윤
-... print("소개팅 애프터 성공률 분석 시스템")
-... print("=" * 50)
-... 
-... portfolio = []
-... 
-... for i in range(3):
-...     print(f"\n[{i+1} 번째 소개팅 데이터 입력]")
-...     
-...         name = input("상대방 이름: ")
-...         
-...         response_speed = float(input("답장 속도 (1: 빠름 ~ 10: 느림): "))
-...         if response_speed < 1 or response_speed > 10:
-...             print("1~10 사이 값만 입력하세요. 다시 입력!")
-...             continue
-... 
-...         chat_time = float(input("대화 시간(시간): "))
-...         emoticon = int(input("이모티콘 빈도 (1~10): "))
-... 
-...         target = []
-...         portfolio.append(target)
-...         portfolio.append(response_spped)
-...         portfolio.append(chat_time)
-...         portfolio.append(emoticon)
-... 
-...         portfolio.append(target)
-... 
-... print(f"\n총 입력된 데이터 수: {len(portfolio)} 명")
-... print("\n결과 분석 시작\n")
-... 
-... scores = []
-... for person in portfolio:
-...     name = person[0]
-...     speed = person[1]
-...     time = person[2]
-...     emo = person[3]
+>>> # 파일이름 : 3차과제
+# 작 성 자 : 장서윤
+print("소개팅 애프터 성공률 분석 시스템")
+print("=" * 50)
+
+portfolio = []
+
+for i in range(3):
+    print(f"\n[{i+1} 번째 소개팅 데이터 입력]")
+    
+        name = input("상대방 이름: ")
+        
+        response_speed = float(input("답장 속도 (1: 빠름 ~ 10: 느림): "))
+        if response_speed < 1 or response_speed > 10:
+            print("1~10 사이 값만 입력하세요. 다시 입력!")
+            continue
+
+        chat_time = float(input("대화 시간(시간): "))
+        emoticon = int(input("이모티콘 빈도 (1~10): "))
+
+        target = []
+        portfolio.append(target)
+        portfolio.append(response_spped)
+        portfolio.append(chat_time)
+        portfolio.append(emoticon)
+
+        portfolio.append(target)
+
+print(f"\n총 입력된 데이터 수: {len(portfolio)} 명")
+print("\n결과 분석 시작\n")
+
+scores = []
+for person in portfolio:
+    name = person[0]
+    speed = person[1]
+    time = person[2]
+    emo = person[3]
 
     time = min(time, 5)
     emo = min(emo, 10)
@@ -77,3 +77,4 @@ Enter "help" below or click "Help" above for more information.
 
 print("\n 전체 통계")
 print(f"최고 점수: {max(scores):.1f}")
+print(f"평균 점수: {sum(scores)/len(scores):.1f}")
