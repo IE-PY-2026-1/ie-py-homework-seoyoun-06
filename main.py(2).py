@@ -6,34 +6,33 @@ print("소개팅 애프터 성공률 분석 시스템")
 print("=" * 50)
 
 portfolio = []
+scores = []
 
-for i in range(3):
-    print(f"\n[{i+1} 번째 소개팅 데이터 입력]")
+def input_data():
+    global portfolio  
     
+    print("\n--- 데이터 입력을 시작합니다 ---")
+    for i in range(3):
+        print(f"\n[{i+1} 번째 소개팅 데이터 입력]")
+        
         name = input("상대방 이름: ")
         
-        response_speed = float(input("답장 속도 (1: 빠름 ~ 10: 느림): "))
-        if response_speed < 1 or response_speed > 10:
+        while True:
+            response_speed = float(input("답장 속도 (1: 빠름 ~ 10: 느림): "))
+            if 1 <= response_speed <= 10:
+                break
             print("1~10 사이 값만 입력하세요. 다시 입력!")
-            continue
-
+            
         chat_time = float(input("대화 시간(시간): "))
         emoticon = int(input("이모티콘 빈도 (1~10): "))
 
-        target = []
-        portfolio.append(target)
-        portfolio.append(response_spped)
-        portfolio.append(chat_time)
-        portfolio.append(emoticon)
-
+        target = [name, response_speed, chat_time, emoticon]
         portfolio.append(target)
 
-print(f"\n총 입력된 데이터 수: {len(portfolio)} 명")
-print("\n결과 분석 시작\n")
+    print(f"\n총 입력된 데이터 수: {len(portfolio)} 명")
 
-scores = []
-for person in portfolio:
-    name = person[0]
+
+def calculate_score(person):  
     speed = person[1]
     time = person[2]
     emo = person[3]
@@ -42,7 +41,7 @@ for person in portfolio:
     emo = min(emo, 10)
     speed = max(1, min(speed, 10))
 
-    raw_score = (0)
+    raw_score = 0
     raw_score += time * 2.0
     raw_score += emo * 0.3
     raw_score += (10 - speed) * 0.3
@@ -50,31 +49,81 @@ for person in portfolio:
     max_score = 16
     score = (raw_score / max_score) * 10
 
-    scores.append(score)
+    return score  
 
-  
-    if score >= 9:
-        grade = "S급"
-    elif score >= 8:
-        grade = "A급"
-    elif score >= 7:
-        grade = "B급"
-    elif score >= 6:
-        grade = "C급"
-    else:
-        grade = "D급"
 
-    print(f"{name} 님의 애프터 지수: {score:.1f} / 10 → {grade}")
+def view_portfolio():
+    if len(portfolio) == 0:
+        print("\n저장된 데이터가 없습니다. 먼저 1번 메뉴에서 데이터를 입력해주세요!")
+        return
 
-  
-    if score >= 8:
-        if speed <= 3 and emo >= 7:
-            print("핑크빛 고속도로")
+    print("\n" + "-"*10 + " [소개팅 포트폴리오 조회] " + "-"*10)
+    for i, person in enumerate(portfolio):
+        print(f"[{i+1}] 이름: {person[0]} | 답장속도: {person[1]} | 대화시간: {person[2]}시간 | 이모티콘: {person[3]}")
+    print("-" * 45)
+
+
+def analyze_portfolio():
+    if len(portfolio) == 0:
+        print("\n분석할 데이터가 없습니다. 먼저 1번 메뉴에서 데이터를 입력해주세요!")
+        return
+
+    print("\n결과 분석 시작\n")
+    scores.clear() 
     
-    if score > 9.5:
-        print(f"거의 성공 확정! 분석종료")
-        break
+    for person in portfolio:
+        name = person[0]
+        speed = person[1]
+        emo = person[3]
 
-print("\n 전체 통계")
-print(f"최고 점수: {max(scores):.1f}")
-print(f"평균 점수: {sum(scores)/len(scores):.1f}")
+        score = calculate_score(person)
+        scores.append(score)
+
+        if score >= 9:
+            grade = "S급"
+        elif score >= 8:
+            grade = "A급"
+        elif score >= 7:
+            grade = "B급"
+        elif score >= 6:
+            grade = "C급"
+        else:
+            grade = "D급"
+
+        print(f"{name} 님의 애프터 지수: {score:.1f} / 10 → {grade}")
+
+        if score >= 8 and speed <= 3 and emo >= 7:
+            print("▶ [특별 칭호 부여]: 핑크빛 고속도로 🌸")
+        
+        if score > 9.5:
+            print(f"💡 {name} 님은 거의 성공 확정 라인입니다!")
+
+    print("\n" + "="*15 + " 전체 통계 " + "="*15)
+    print(f"최고 점수: {max(scores):.1f} 점")
+    print(f"평균 점수: {sum(scores)/len(scores):.1f} 점")
+    print("=" * 41)
+
+
+while True:  
+    print("\n" + "=" * 40)
+    print("        [ 메 인 메 뉴 ]")
+    print("=" * 40)
+    print("1. 소개팅 데이터 입력")
+    print("2. 연애 포트폴리오 조회")
+    print("3. 애프터 결과 통계 분석")
+    print("4. 프로그램 종료")
+    print("=" * 40)
+    
+    choice = input("원하는 메뉴 번호를 선택하세요: ")
+    
+    if choice == "1":
+        input_data()          
+    elif choice == "2":
+        view_portfolio()      
+    elif choice == "3":
+        analyze_portfolio()   
+    elif choice == "4":
+        print("\n프로그램을 완전히 종료합니다. 시스템을 이용해 주셔서 감사합니다.")
+        break               
+    else:
+        print("\n[경고] 잘못된 입력입니다. 1~4번 사이의 번호를 정확히 입력해주세요.")
