@@ -1,3 +1,4 @@
+[60252455 장서윤 AI협업과정4차.pdf](https://github.com/user-attachments/files/28911243/60252455.AI.4.pdf)
 [AI 협업캡쳐 60252455 장서윤.pdf](https://github.com/user-attachments/files/28227342/AI.60252455.pdf)[AI 협업캡쳐&실행결과.pdf](https://github.com/user-attachments/files/27132009/AI.pdf)
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/qR-atX5d)
 # 🐍 [2026-01] 나만의 파이썬 소프트웨어 개발 프로젝트
@@ -140,6 +141,8 @@
 
     
 ### **📁 증빙 자료:**
-  * [4차_AI협업캡처.pdf 첨부 완료] (첨부 후 링크)
-  * [4차과제_실행결과.jpg]
+  * [4차_AI협업캡처.pdf 첨부 완료] [60252455 장서윤 AI협업과정4차.pdf](https://github.com/user-attachments/files/28911247/60252455.AI.4.pdf)
+
+  * [4차과제_실행결과.jpg][60252455 장서윤 실행결과.pdf](https://github.com/user-attachments/files/28911322/60252455.pdf)
+
 <br>
